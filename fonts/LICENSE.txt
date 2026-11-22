@@ -1,0 +1,2 @@
+Cormorant Garamond, Allura and Jost are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org).
+Hosted here so the site makes no requests to third parties. Source: fontsource packages on npm.

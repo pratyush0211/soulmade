@@ -1,0 +1,19 @@
+{
+  "brand": "Soulmade",
+  "byline": "by Aditi & Pratyush",
+  "city": "Bangalore",
+  "domain": "https://soulmade.co.in",
+  "whatsapp": "",
+  "email": "",
+  "instagram": "soulmadebyus",
+  "products": [
+    {"name": "Floral Bliss Collection", "price": "₹199", "image": "floral-bliss.jpg", "desc": "Handcrafted candles with real flower petals."},
+    {"name": "Rose Petal Tealights", "price": "₹199", "image": "rose-tealights.jpg", "desc": "Delicate tealights infused with rose petals."},
+    {"name": "Ornate Diya Candles", "price": "₹189", "image": "ornate-diya.jpg", "desc": "Traditional designs with golden embellishments."},
+    {"name": "Festive Star Collection", "price": "₹129", "image": "festive-stars.jpg", "desc": "Colourful star-shaped decorative candles."},
+    {"name": "Diya Leaf Candles", "price": "₹35", "image": "diya-leaf.jpg", "desc": "Traditional leaf-shaped candles with gold flakes."},
+    {"name": "Poetry in Wax", "price": "₹550", "image": "poetry-in-wax.jpg", "desc": "A floral embossed candle in a golden-rimmed dish."},
+    {"name": "Floral Bowl Candle", "price": "₹550", "image": "floral-bowl.jpg", "desc": "A wooden bowl with a vibrant floral wax design."},
+    {"name": "Signature Jar Candles", "price": "₹200 – ₹300", "image": "jar-candles.jpg", "wide": true, "desc": "Jar candles in glass and amber, with wooden or metal lids."}
+  ]
+}

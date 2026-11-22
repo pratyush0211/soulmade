@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ c.brand }}: handcrafted candles from {{ c.city }}</title>
+  <meta name="description" content="Hand-made candles from {{ c.city }}: floral tealights, festive diyas and jar candles. Enquire to order. {{ c.brand }} {{ c.byline }}.">
+  <link rel="canonical" href="{{ c.domain }}/">
+  <meta name="theme-color" content="#f6efe4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ c.brand }}: handcrafted candles from {{ c.city }}">
+  <meta property="og:description" content="Floral tealights, festive diyas and jar candles, made by hand in {{ c.city }}.">
+  <meta property="og:url" content="{{ c.domain }}/">
+  <meta property="og:image" content="{{ c.domain }}/images/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/cormorant-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jost-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"{{ c.brand }}","url":"{{ c.domain }}/","logo":"{{ c.domain }}/images/logo.jpg","sameAs":["https://instagram.com/{{ c.instagram }}"]}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="mark" href="/" aria-label="{{ c.brand }} home"><span class="script">{{ c.brand }}</span><small>{{ c.byline }}</small></a>
+    <nav aria-label="Main">
+      <a href="#collection">Collection</a><a href="#story">Our story</a><a href="#order">How to order</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-small" href="{{ general_url }}">Enquire</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker rise">Handcrafted in {{ c.city }}</p>
+      <h1 class="rise">Handcrafted candles <em>for your soul.</em></h1>
+      <p class="lead rise">Hand-made candles from {{ c.city }}: floral tealights, festive diyas and jar candles for your home, your festivals and your gifts.</p>
+      <div class="actions rise">
+        <a class="btn" href="#collection">See the collection <span class="arr" aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn-ghost" href="{{ general_url }}">{{ general_label }}</a>
+      </div>
+    </div>
+    <div class="hero-art rise">
+      <div class="arch"><img src="/images/hero.jpg" alt="A woven jute mat with hand-made wax pieces: a star, rings, a block with star anise, and cloud-shaped candles" width="1170" height="1330" fetchpriority="high"></div>
+      <svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="ring" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#ring">HANDCRAFTED &#183; {{ c.city|upper }} &#183; SOULMADE &#183; CANDLES &#183;</textPath></text></svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="collection">
+  <div class="wrap">
+    <p class="kicker reveal">The collection</p>
+    <h2 class="reveal">Each candle, <em>made by hand.</em></h2>
+    <p class="intro reveal">Florals, festive diyas and jars. Tap enquire on anything you like and we'll reply with availability and delivery.</p>
+    <div class="grid">
+      {% for p in products %}
+      <article class="card reveal{% if p.wide %} wide{% endif %}">
+        <div class="photo"><img src="/images/{{ p.image }}" alt="{{ p.name }}" loading="lazy"></div>
+        <div class="info">
+          <div class="row"><h3>{{ p.name }}</h3><span class="price">{{ p.price }}</span></div>
+          <p>{{ p.desc }}</p>
+          <a class="link" href="{{ p.url }}">{{ p.label }} <span class="arr" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="story">
+  <div class="wrap story">
+    <div class="story-img reveal"><img src="/images/about-jar.jpg" alt="A hand holding an amber Soulmade jar candle in warm window light" loading="lazy"></div>
+    <div class="story-copy">
+      <p class="kicker reveal">Our story</p>
+      <h2 class="reveal">Made in {{ c.city }}, <em>by two people.</em></h2>
+      <p class="reveal">Soulmade is made by Aditi &amp; Pratyush. Every candle is made by hand, from the floral tealights to the festive diyas and the jars with their wooden lids.</p>
+      <p class="reveal">We make them the slow way, because we'd like each one to feel like a small gift, whether it's for your home or for someone you love.</p>
+      <a class="link reveal" href="#contact">Say hello <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="order">
+  <div class="wrap">
+    <p class="kicker reveal">How to order</p>
+    <h2 class="reveal">Simple, <em>and personal.</em></h2>
+    <ol class="steps">
+      <li class="reveal"><span class="n">1</span><h3>Choose what you like</h3><p>Browse the collection and note the candles you'd like.</p></li>
+      <li class="reveal"><span class="n">2</span><h3>Send us a message</h3><p>Tap enquire on any candle. It opens a chat with the name already filled in.</p></li>
+      <li class="reveal"><span class="n">3</span><h3>We'll confirm the details</h3><p>We reply with availability, delivery and how to pay, and then we pack it for you.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section band" id="contact">
+  <div class="wrap contact">
+    <p class="kicker reveal">Contact</p>
+    <h2 class="reveal">Say hello, <em>or order.</em></h2>
+    <p class="intro reveal">Custom orders and gifting are welcome. Tell us what you have in mind.</p>
+    <div class="actions reveal">
+      <a class="btn btn-light" href="{{ general_url }}">{{ general_label }} <span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-outline" href="https://instagram.com/{{ c.instagram }}">@{{ c.instagram }} on Instagram</a>
+    </div>
+    {% if has_email %}<p class="small reveal"><a href="mailto:{{ c.email }}">{{ c.email }}</a></p>{% endif %}
+    <p class="small reveal">{{ c.city }}, India</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="/images/logo.jpg" alt="{{ c.brand }} {{ c.byline }}" width="800" height="800" loading="lazy">
+    <p>&copy; <span id="yr">2026</span> {{ c.brand }} {{ c.byline }}. Made with care in {{ c.city }}.</p>
+  </div>
+</footer>
+<script src="/js/site.js" defer></script>
+</body>
+</html>
